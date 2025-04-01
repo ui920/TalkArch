@@ -67,11 +67,6 @@ nav a {
 
 .home {
   left: 1.5vw;
-  transition: color 0.3s ease;
-}
-
-.home:hover {
-  color: blue; /* 원하는 색상 */
 }
 
 .rist {
@@ -87,12 +82,6 @@ nav a {
 .list,
 .info {
   right: 1.5vw;
-  transition: color 0.3s ease;
-}
-
-.list:hover,
-.info:hover {
-  color: blue; /* 원하는 색상 */
 }
 
 nav a {
