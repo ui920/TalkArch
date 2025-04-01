@@ -10,6 +10,15 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <a class="welcome" href="page.html">말?</a>
+    <a class="welcome" href="#" onclick="showPopups()">말?</a>
+
+    <script>
+      function showPopups() {
+        alert('첫 번째 팝업 메시지!');
+        alert('두 번째 팝업 메시지!');
+        alert('세 번째 팝업 메시지!');
+        window.location.href = 'page.html'; // page.html로 이동
+      }
+    </script>
   </body>
 </html>
