@@ -70,11 +70,11 @@ nav a {
   position: absolute;
 }
 
-.home {
+.index {
   left: 1.5vw;
 }
 
-.home:hover {
+.index:hover {
   color: blue;
 }
 
