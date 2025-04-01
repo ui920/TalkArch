@@ -4,11 +4,12 @@
   box-sizing: border-box;
   word-break: keep-all;
   font-family: 'helvetica', sans-serif;
+  font-size: 0;
 }
 
 a {
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: black;
 }
 
 p {
@@ -17,6 +18,7 @@ p {
 
 li {
   list-style: none;
+  font-weight: lighter;
 }
 
 ::-webkit-scrollbar {
@@ -25,6 +27,8 @@ li {
 
 /* ------------- home ------------- */
 body {
+  width: 100%;
+  height: 100%;
 }
 
 .welcome {
@@ -32,7 +36,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -48%);
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease, font-size 0.3s ease;
   font-size: 40vw;
   letter-spacing: 2vw;
   line-height: 120vw;
@@ -41,7 +45,7 @@ body {
 
 .welcome:hover {
   color: blue;
-  transform: translate(-50%, -48%) scale(1.1);
+  font-size: 45vw;
 }
 
 /*-------------- menu ------------- */
@@ -55,35 +59,40 @@ nav {
   z-index: 99;
 }
 
-.home {
-  color: blue;
+nav a {
+  font-size: 1.25vw;
+  color: rgb(0, 0, 0);
   position: absolute;
+}
+
+.home {
   left: 1.5vw;
+  transition: color 0.3s ease;
+}
+
+.home:hover {
+  color: blue; /* 원하는 색상 */
 }
 
 .rist {
-  color: blue;
-  position: absolute;
   left: 6.2vw;
 }
-
 .obs {
-  color: blue;
-  position: absolute;
   left: 10vw;
 }
-
 .sample {
-  color: blue;
-  position: absolute;
   left: 13.6vw;
 }
 
 .list,
 .info {
-  color: rgb(8, 0, 255);
-  position: absolute;
   right: 1.5vw;
+  transition: color 0.3s ease;
+}
+
+.list:hover,
+.info:hover {
+  color: blue; /* 원하는 색상 */
 }
 
 nav a {
@@ -106,14 +115,14 @@ h2,
 h3,
 p,
 li {
-  color: rgb(8, 0, 255);
+  color: rgb(0, 0, 0);
   font-size: 1.25vw;
 }
 
 h1 {
   position: fixed;
-  padding-top: 1.5vw;
-  padding-left: 1.5vw;
+  top: 1.5vw;
+  left: 1.5vw;
 }
 
 h2 {
@@ -130,11 +139,8 @@ summary {
 }
 
 .contents {
-  position: relative;
   margin-top: 100px;
   display: inline-block;
-  top: 0;
-  left: 0;
   width: 20%;
   font-size: 1.25vw;
   vertical-align: top;
@@ -143,6 +149,13 @@ summary {
 }
 
 @media screen and (max-width: 900px) {
+  /* ------------- home ------------- */
+  .welcome {
+    word-break: break-all;
+    font-size: 80vw;
+    line-height: 80vw;
+  }
+
   /* ------------- list ------------- */
   nav {
     position: fixed;
@@ -166,5 +179,46 @@ summary {
   .info {
     position: absolute;
     right: 4vw;
+  }
+
+  /* ------------- info ------------- */
+
+  h1,
+  h2,
+  h3,
+  p,
+  li {
+    font-size: 4vw;
+  }
+
+  h1 {
+    padding-top: 4vw;
+    padding-left: 4vw;
+  }
+
+  h2 {
+    width: 60px;
+    margin-bottom: 2.5vw;
+  }
+
+  summary {
+    cursor: pointer;
+  }
+
+  .intro {
+    padding: 4vw;
+  }
+
+  .contents {
+    position: relative;
+    margin-top: 100px;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    width: 20%;
+    font-size: 1.25vw;
+    vertical-align: top;
+    padding-right: 1vw;
+    line-height: 1.4;
   }
 }
