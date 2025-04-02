@@ -6,7 +6,6 @@
   font-size: 16px;
 }
 
-h1,
 h2 {
   font-weight: 500;
 }
@@ -46,6 +45,7 @@ section {
   grid-template-columns: repeat(5, 1fr);
   gap: 2vw;
   padding: 4vw;
+  justify-content: center;
 }
 
 .contents {
@@ -55,6 +55,7 @@ section {
   font-size: 1.25vw;
   line-height: 1.4;
   display: block;
+  width: fit-content;
   width: 100%;
   word-wrap: break-word;
 }
@@ -130,7 +131,7 @@ body {
 nav {
   position: fixed;
   display: flex;
-  align-items: center; /* 세로 정렬 */
+  align-items: center;
   top: 0;
   left: 0;
   width: 100%;
@@ -141,7 +142,7 @@ nav {
 }
 
 .nav-right {
-  margin-left: auto; /* 오른쪽 끝으로 이동 */
+  margin-left: auto;
 }
 
 nav a {
