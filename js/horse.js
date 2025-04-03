@@ -180,3 +180,27 @@
 // if (typeof module !== 'undefined') {
 //   module.exports = Example.timescale;
 // }
+
+// document.addEventListener('DOMContentLoaded', function () {
+//   const messages = [
+//     '말해 뭐해~ 🐎',
+//     '말 많은 거 안 지겨워? 🤔',
+//     '히히힝~',
+//     '말 좀 그만해봐!!',
+//     '내가 달릴 차례인가?',
+//   ];
+
+//   function showMessage() {
+//     const randomMsg = messages[Math.floor(Math.random() * messages.length)];
+//     const bubble = document.createElement('div');
+//     bubble.className = 'speech-bubble';
+//     bubble.innerText = randomMsg;
+//     document.body.appendChild(bubble);
+
+//     setTimeout(() => {
+//       bubble.remove();
+//     }, 3000);
+//   }
+
+//   setInterval(showMessage, 5000);
+// });
