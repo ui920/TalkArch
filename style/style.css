@@ -1,3 +1,40 @@
+/* 전체 컨테이너 */
+#iframes {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+/* 안쪽 슬라이드 영역 */
+#iframes-inner {
+  display: flex;
+  width: 300%; /* iframe 3개면 3배 */
+  height: 100vh;
+  transition: left 0.5s ease-in-out;
+  position: relative;
+  left: 0;
+}
+
+/* 각각의 iframe 영역 */
+.iframe-body {
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* 실제 iframe 태그 */
+.iframe-body iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
 /* ================== */
 /* Reset & Common */
 /* ================== */
@@ -117,7 +154,23 @@ section {
 
 /* Nav */
 
-.spinning-question {
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.index:hover {
+  animation: pulse 0.8s infinite ease-in-out;
+  display: inline-block;
+}
+
+.back:hover,
+.s-q:hover {
   display: inline-block;
   font-size: 1.6vw;
   margin-right: 10px;
@@ -135,6 +188,27 @@ section {
   }
 }
 
+@keyframes moveLeftRight {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(2px);
+  }
+}
+
+.back1,
+.info {
+  display: inline-block;
+}
+
+.back1:hover,
+.info:hover {
+  animation: moveLeftRight 0.4s ease-in-out infinite;
+  color: blue;
+}
+
 nav {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -146,6 +220,7 @@ nav {
   padding-top: 1.8vw;
   z-index: 99;
   padding-inline: 30px;
+  padding-bottom: 50px;
 }
 
 canvas {
@@ -167,10 +242,10 @@ nav a {
 }
 
 .index:hover,
+.back1:hover,
 .back:hover,
-.back2:hover,
 .info:hover,
-.spinning-question:hover,
+.s-q:hover,
 .hd1:hover {
   color: blue;
 }
@@ -208,6 +283,9 @@ nav a {
 }
 .wavy-text:nth-child(4) {
   animation-delay: 0.45s;
+}
+.wavy-text:nth-child(5) {
+  animation-delay: 0.55s;
 }
 
 @keyframes marquee {
