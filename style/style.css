@@ -203,6 +203,11 @@ canvas {
   font-size: 1.3vw;
 }
 
+.back1,
+.info {
+  font-size: 1.4vw;
+}
+
 nav a {
   font-weight: 400;
   font-size: 1.6vw;

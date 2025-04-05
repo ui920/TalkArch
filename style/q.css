@@ -1,0 +1,59 @@
+.center-page {
+  background-color: #1708ff;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 0.2rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.fd-2 {
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: -0.8rem;
+}
+
+.fade-delay-3 {
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  font-weight: 300;
+  margin-top: 1.5rem;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-wrapper > * {
+  opacity: 0;
+  animation: fadeInUp 1.2s ease-out forwards;
+  align-items: center;
+  text-align: center;
+}
+
+.fade-delay-1 {
+  animation-delay: 0.4s;
+}
+
+.fade-delay-2,
+.fd-2 {
+  animation-delay: 0.8s;
+}
+
+.fade-delay-3 {
+  animation-delay: 1.4s;
+}
