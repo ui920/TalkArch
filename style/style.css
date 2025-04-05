@@ -195,6 +195,14 @@ canvas {
   margin-left: auto;
 }
 
+.back {
+  color: white;
+}
+
+.hd1 {
+  font-size: 1.3vw;
+}
+
 nav a {
   font-weight: 400;
   font-size: 1.6vw;
@@ -231,7 +239,7 @@ nav a {
 }
 
 .wavy-text {
-  font-size: 1.6vw;
+  font-size: 1.4vw;
   display: inline-block;
   animation: wave 1.2s infinite ease-in-out;
 }
