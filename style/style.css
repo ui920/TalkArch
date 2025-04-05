@@ -1,40 +1,3 @@
-/* 전체 컨테이너 */
-#iframes {
-  width: 100vw;
-  height: 100vh;
-  overflow: auto;
-  position: relative;
-  margin: 0;
-  padding: 0;
-}
-
-/* 안쪽 슬라이드 영역 */
-#iframes-inner {
-  display: flex;
-  width: 300%; /* iframe 3개면 3배 */
-  height: 100vh;
-  transition: left 0.5s ease-in-out;
-  position: relative;
-  left: 0;
-}
-
-/* 각각의 iframe 영역 */
-.iframe-body {
-  width: 100vw;
-  height: 100vh;
-  flex-shrink: 0;
-  margin: 0;
-  padding: 0;
-}
-
-/* 실제 iframe 태그 */
-.iframe-body iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  display: block;
-}
-
 /* ================== */
 /* Reset & Common */
 /* ================== */
@@ -48,15 +11,14 @@
 
 h2,
 h3,
-p,
-li {
+p {
   color: rgb(0, 0, 0);
-  font-size: 1.25vw;
+  font-size: 26px;
 }
 
 h2 {
   font-weight: 400;
-  width: 60px;
+  width: 30px;
   margin-bottom: 2.5vw;
 }
 
@@ -65,17 +27,12 @@ a {
   color: black;
 }
 
-p,
-li {
+p {
   text-align: left;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 20px;
   white-space: normal;
   word-break: break-word;
-}
-
-li {
-  list-style: none;
 }
 
 summary {
@@ -101,14 +58,15 @@ section {
 .intro {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 2vw;
+  /* gap: 5vw; */
   padding: 1.5vw;
   justify-content: center;
+  padding-inline: 15px;
 }
 
 .contents {
   position: relative;
-  padding: 1.5vw;
+  padding: 1vw;
   border-radius: 10px;
   font-size: 1.25vw;
   line-height: 1.4;
@@ -116,7 +74,7 @@ section {
   width: fit-content;
   width: 100%;
   word-wrap: break-word;
-  margin-top: 80px;
+  margin-top: 50px;
   vertical-align: top;
   padding-right: 1vw;
 }
@@ -160,11 +118,14 @@ section {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.2);
+    transform: scale(1.05);
   }
 }
 
-.index:hover {
+.index:hover,
+.rist:hover,
+.obs:hover,
+.sample:hover {
   animation: pulse 0.8s infinite ease-in-out;
   display: inline-block;
 }
@@ -216,11 +177,11 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  height: 40px;
-  padding-top: 1.8vw;
+  height: 68px;
+  padding-top: 5px;
   z-index: 99;
   padding-inline: 30px;
-  padding-bottom: 50px;
+  /* padding-bottom: 10px; */
 }
 
 canvas {
@@ -242,6 +203,9 @@ nav a {
 }
 
 .index:hover,
+.rist:hover,
+.obs:hover,
+.sample:hover,
 .back1:hover,
 .back:hover,
 .info:hover,

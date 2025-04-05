@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>말이 많아도 괜찮아?</title>
     <link rel="stylesheet" href="/style/style.css" />
+
     <style>
       #iframes {
         width: 100%;
-        overflow: hidden;
+        /* overflow: hidden; */
         position: relative;
-        height: 90vh;
-        margin-top: 20px;
+        height: 94vh;
       }
 
       #iframes-inner {
@@ -27,12 +27,25 @@
       .iframe-body {
         width: 33.3333%;
         height: 100%;
+        max-width: 830px;
+      }
+
+      .iframe-body2 {
+        width: 33.3333%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .iframe-body3 {
+        width: 33.3333%;
+        height: 100%;
+        overflow: hidden;
       }
 
       iframe {
         width: 100%;
         height: 100%;
-        border: none;
+        /* border: none; */
       }
 
       nav a {
@@ -45,11 +58,11 @@
   <body>
     <nav>
       <div class="nav-left">
-        <a class="s-q" href="q.html">⁇</a>
         <a class="index" href="index.html">( )</a>
         <a class="rist" data-target="0">(RIST)</a>
         <a class="obs" data-target="1">(OBS)</a>
         <a class="sample" data-target="2">(SAMPLE)</a>
+        <a class="s-q" href="q.html">⁇</a>
       </div>
       <div class="nav-right">
         <a class="info" href="info.html">🡒</a>
@@ -63,12 +76,12 @@
             src="https://docs.google.com/spreadsheets/d/1aD0E4OYDJoMoFwGN_qzYtnb4odsoEFygfI62W2SLW0M/edit?usp=sharing"
           ></iframe>
         </div>
-        <div class="iframe-body">
+        <div class="iframe-body2">
           <iframe
-            src="https://docs.google.com/spreadsheets/d/1C2Jr7-z8xdC_UqUOf2hR0R4DBds4KYmFnxLhX8_-gp8/edit?usp=sharing"
+            src="https://docs.google.com/spreadsheets/d/1ZO0aVbHiLDHTT2LLFrzVXZGyu2cLAoBE0kAzsGp3EI0/edit?usp=sharing"
           ></iframe>
         </div>
-        <div class="iframe-body">
+        <div class="iframe-body3">
           <iframe
             src="https://docs.google.com/spreadsheets/d/1ZO0aVbHiLDHTT2LLFrzVXZGyu2cLAoBE0kAzsGp3EI0/edit?usp=sharing"
           ></iframe>
